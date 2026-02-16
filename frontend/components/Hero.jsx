@@ -23,7 +23,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="relative"
           >
-            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-zinc-700 shadow-xl">
+            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-zinc-300 dark:border-zinc-700 shadow-xl">
               <Image
                 src="https://ashutosh6393.github.io/Portfolio/images/my-image.webp"
                 alt="Ashutosh Verma"
@@ -42,7 +42,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-zinc-900 dark:text-white mb-4"
             >
               Ashutosh Verma
             </motion.h1>
@@ -51,25 +51,25 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-lg md:text-xl text-zinc-400 mb-6"
+              className="text-lg md:text-xl text-zinc-600 dark:text-zinc-400 mb-6"
             >
-              <span className="text-zinc-200 font-medium">Full Stack Developer</span>
+              <span className="text-zinc-800 dark:text-zinc-200 font-medium">Full Stack Developer</span>
               {" "}&bull;{" "}
-              <span className="text-zinc-400">Real-Time Systems</span>
+              <span className="text-zinc-500 dark:text-zinc-400">Real-Time Systems</span>
               {" "}&bull;{" "}
-              <span className="text-zinc-400">AI-Powered Applications</span>
+              <span className="text-zinc-500 dark:text-zinc-400">AI-Powered Applications</span>
             </motion.p>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="text-zinc-400 leading-relaxed mb-8 max-w-2xl"
+              className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-8 max-w-2xl"
             >
               I build production-ready web applications with clean architecture, real-time capabilities, and secure backends. Currently exploring{" "}
-              <span className="text-zinc-200">AI systems</span>,{" "}
-              <span className="text-zinc-200">scalable WebSockets</span>, and{" "}
-              <span className="text-zinc-200">distributed architectures</span>.
+              <span className="text-zinc-800 dark:text-zinc-200">AI systems</span>,{" "}
+              <span className="text-zinc-800 dark:text-zinc-200">scalable WebSockets</span>, and{" "}
+              <span className="text-zinc-800 dark:text-zinc-200">distributed architectures</span>.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -81,7 +81,7 @@ export default function Hero() {
             >
               <Button
                 asChild
-                className="bg-white text-black hover:bg-zinc-200 transition-colors"
+                className="bg-zinc-900 dark:bg-white text-white dark:text-black hover:bg-zinc-700 dark:hover:bg-zinc-200 transition-colors"
               >
                 <Link href="#projects">
                   View Projects
@@ -91,7 +91,7 @@ export default function Hero() {
               <Button
                 asChild
                 variant="outline"
-                className="border-zinc-700 hover:bg-zinc-800 transition-colors"
+                className="border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
               >
                 <Link href="#contact">
                   Get in Touch
@@ -100,7 +100,7 @@ export default function Hero() {
               <Button
                 asChild
                 variant="ghost"
-                className="hover:bg-zinc-800 transition-colors"
+                className="hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors"
               >
                 <a href="https://ashutosh6393.github.io/Portfolio/ashutosh-resume.pdf" target="_blank" rel="noopener noreferrer">
                   <FileDown className="mr-2 h-4 w-4" />
@@ -120,7 +120,7 @@ export default function Hero() {
                 href="https://github.com/Ashutosh6393"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-zinc-400 hover:text-white transition-colors p-2 hover:bg-zinc-800 rounded-lg"
+                className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors p-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg"
               >
                 <Github className="h-5 w-5" />
               </a>
@@ -128,7 +128,7 @@ export default function Hero() {
                 href="https://linkedin.com/in/ashutosh-verma"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-zinc-400 hover:text-white transition-colors p-2 hover:bg-zinc-800 rounded-lg"
+                className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors p-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
@@ -136,13 +136,13 @@ export default function Hero() {
                 href="https://twitter.com/ashutosh_v"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-zinc-400 hover:text-white transition-colors p-2 hover:bg-zinc-800 rounded-lg"
+                className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors p-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg"
               >
                 <Twitter className="h-5 w-5" />
               </a>
               <a
                 href="mailto:ashutoshv262@gmail.com"
-                className="text-zinc-400 hover:text-white transition-colors p-2 hover:bg-zinc-800 rounded-lg"
+                className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors p-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg"
               >
                 <Mail className="h-5 w-5" />
               </a>
