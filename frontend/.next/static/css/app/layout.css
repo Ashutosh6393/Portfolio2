@@ -1667,6 +1667,11 @@ html {
   color: rgb(63 63 70 / var(--tw-text-opacity, 1));
 }
 
+.dark\:text-zinc-600:is(.dark *){
+  --tw-text-opacity: 1;
+  color: rgb(82 82 91 / var(--tw-text-opacity, 1));
+}
+
 .dark\:shadow-none:is(.dark *){
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
@@ -1681,6 +1686,11 @@ html {
 .dark\:hover\:border-zinc-700:hover:is(.dark *){
   --tw-border-opacity: 1;
   border-color: rgb(63 63 70 / var(--tw-border-opacity, 1));
+}
+
+.dark\:hover\:border-zinc-600:hover:is(.dark *){
+  --tw-border-opacity: 1;
+  border-color: rgb(82 82 91 / var(--tw-border-opacity, 1));
 }
 
 .dark\:hover\:bg-zinc-200:hover:is(.dark *){
