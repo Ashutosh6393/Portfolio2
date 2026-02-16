@@ -22,8 +22,8 @@ export default function Philosophy() {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Engineering Mindset</h2>
-          <div className="h-1 w-16 bg-zinc-700 rounded" />
+          <h2 className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-white mb-2">Engineering Mindset</h2>
+          <div className="h-1 w-16 bg-zinc-300 dark:bg-zinc-700 rounded" />
         </motion.div>
 
         <motion.div
@@ -31,12 +31,12 @@ export default function Philosophy() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
-          className="relative p-8 rounded-2xl bg-zinc-900/50 border border-zinc-800"
+          className="relative p-8 rounded-2xl bg-white dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 shadow-sm dark:shadow-none"
         >
-          <Quote className="absolute top-6 left-6 h-8 w-8 text-zinc-700" />
+          <Quote className="absolute top-6 left-6 h-8 w-8 text-zinc-200 dark:text-zinc-700" />
           
           <div className="pt-8 space-y-4">
-            <p className="text-lg text-zinc-300 mb-6">I believe:</p>
+            <p className="text-lg text-zinc-700 dark:text-zinc-300 mb-6">I believe:</p>
             
             <ul className="space-y-4">
               {principles.map((principle, index) => (
@@ -46,7 +46,7 @@ export default function Philosophy() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex items-start gap-3 text-zinc-400"
+                  className="flex items-start gap-3 text-zinc-600 dark:text-zinc-400"
                 >
                   <span className="mt-2 w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
                   <span>{principle}</span>
@@ -60,7 +60,7 @@ export default function Philosophy() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
             viewport={{ once: true }}
-            className="mt-8 text-zinc-300 font-medium text-center border-t border-zinc-800 pt-6"
+            className="mt-8 text-zinc-700 dark:text-zinc-300 font-medium text-center border-t border-zinc-200 dark:border-zinc-800 pt-6"
           >
             I aim to build products that survive production traffic, not just demo day.
           </motion.p>
