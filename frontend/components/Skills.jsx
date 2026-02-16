@@ -35,7 +35,7 @@ const skillCategories = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-20 px-6 bg-zinc-900/30">
+    <section id="skills" className="py-20 px-6 bg-zinc-50 dark:bg-zinc-900/30">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -44,8 +44,8 @@ export default function Skills() {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Technical Skills</h2>
-          <div className="h-1 w-16 bg-zinc-700 rounded" />
+          <h2 className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-white mb-2">Technical Skills</h2>
+          <div className="h-1 w-16 bg-zinc-300 dark:bg-zinc-700 rounded" />
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-6">
@@ -56,16 +56,16 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="p-5 rounded-xl bg-zinc-800/30 border border-zinc-800 hover:border-zinc-700 transition-all duration-300"
+              className="p-5 rounded-xl bg-white dark:bg-zinc-800/30 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 transition-all duration-300 shadow-sm dark:shadow-none"
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 rounded-lg bg-zinc-700/30">
-                  <category.icon className="h-5 w-5 text-zinc-300" />
+                <div className="p-2 rounded-lg bg-zinc-100 dark:bg-zinc-700/30">
+                  <category.icon className="h-5 w-5 text-zinc-600 dark:text-zinc-300" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-zinc-200">{category.title}</h3>
+                  <h3 className="font-semibold text-zinc-800 dark:text-zinc-200">{category.title}</h3>
                   {category.subtitle && (
-                    <span className="text-xs text-zinc-500">{category.subtitle}</span>
+                    <span className="text-xs text-zinc-400 dark:text-zinc-500">{category.subtitle}</span>
                   )}
                 </div>
               </div>
@@ -74,7 +74,7 @@ export default function Skills() {
                   <Badge
                     key={skill}
                     variant="secondary"
-                    className="bg-zinc-700/30 text-zinc-400 text-xs border border-zinc-700/50 hover:bg-zinc-700/50 transition-colors"
+                    className="bg-zinc-100 dark:bg-zinc-700/30 text-zinc-600 dark:text-zinc-400 text-xs border border-zinc-200 dark:border-zinc-700/50 hover:bg-zinc-200 dark:hover:bg-zinc-700/50 transition-colors"
                   >
                     {skill}
                   </Badge>
