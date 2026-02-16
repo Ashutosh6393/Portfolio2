@@ -36,7 +36,7 @@ const timelineItems = [
 
 export default function Timeline() {
   return (
-    <section id="journey" className="py-20 px-6 bg-zinc-900/30">
+    <section id="journey" className="py-20 px-6 bg-zinc-50 dark:bg-zinc-900/30">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -45,13 +45,13 @@ export default function Timeline() {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Career Snapshot</h2>
-          <div className="h-1 w-16 bg-zinc-700 rounded" />
+          <h2 className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-white mb-2">Career Snapshot</h2>
+          <div className="h-1 w-16 bg-zinc-300 dark:bg-zinc-700 rounded" />
         </motion.div>
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-zinc-800 -translate-x-1/2" />
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-zinc-200 dark:bg-zinc-800 -translate-x-1/2" />
 
           <div className="space-y-8">
             {timelineItems.map((item, index) => (
@@ -72,12 +72,12 @@ export default function Timeline() {
 
                 {/* Content */}
                 <div className={`flex-1 ml-16 md:ml-0 ${index % 2 === 0 ? 'md:pr-20 md:text-right' : 'md:pl-20 md:text-left'}`}>
-                  <div className={`p-5 rounded-xl bg-zinc-800/30 border border-zinc-800 hover:border-zinc-700 transition-all duration-300 ${index % 2 === 0 ? '' : ''}`}>
-                    <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-zinc-700/50 text-zinc-300 mb-3">
+                  <div className={`p-5 rounded-xl bg-white dark:bg-zinc-800/30 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 transition-all duration-300 shadow-sm dark:shadow-none ${index % 2 === 0 ? '' : ''}`}>
+                    <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-zinc-100 dark:bg-zinc-700/50 text-zinc-600 dark:text-zinc-300 mb-3">
                       {item.year}
                     </span>
-                    <h3 className="text-lg font-semibold text-zinc-200 mb-2">{item.title}</h3>
-                    <p className="text-sm text-zinc-400">{item.description}</p>
+                    <h3 className="text-lg font-semibold text-zinc-800 dark:text-zinc-200 mb-2">{item.title}</h3>
+                    <p className="text-sm text-zinc-500 dark:text-zinc-400">{item.description}</p>
                   </div>
                 </div>
 
