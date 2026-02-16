@@ -79,8 +79,8 @@ export default function Projects() {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Projects</h2>
-          <div className="h-1 w-16 bg-zinc-700 rounded" />
+          <h2 className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-white mb-2">Projects</h2>
+          <div className="h-1 w-16 bg-zinc-300 dark:bg-zinc-700 rounded" />
         </motion.div>
 
         <div className="space-y-6">
@@ -92,12 +92,12 @@ export default function Projects() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="bg-zinc-900/50 border-zinc-800 hover:border-zinc-700 transition-all duration-300 overflow-hidden group">
+              <Card className="bg-white dark:bg-zinc-900/50 border-zinc-200 dark:border-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-700 transition-all duration-300 overflow-hidden group shadow-sm dark:shadow-none">
                 <CardContent className="p-0">
                   <div className="flex flex-col lg:flex-row">
                     {/* Image Section */}
                     {project.image && (
-                      <div className="lg:w-72 h-48 lg:h-auto relative overflow-hidden bg-zinc-800">
+                      <div className="lg:w-72 h-48 lg:h-auto relative overflow-hidden bg-zinc-100 dark:bg-zinc-800">
                         <Image
                           src={project.image}
                           alt={project.title}
@@ -111,8 +111,8 @@ export default function Projects() {
                     <div className="flex-1 p-6">
                       <div className="flex items-start justify-between gap-4 mb-3">
                         <div>
-                          <h3 className="text-xl font-bold text-white mb-1">{project.title}</h3>
-                          <p className="text-sm text-zinc-400">{project.subtitle}</p>
+                          <h3 className="text-xl font-bold text-zinc-900 dark:text-white mb-1">{project.title}</h3>
+                          <p className="text-sm text-zinc-500 dark:text-zinc-400">{project.subtitle}</p>
                         </div>
                         <div className="flex gap-2">
                           {project.github && (
@@ -120,7 +120,7 @@ export default function Projects() {
                               href={project.github}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors"
+                              className="p-2 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg transition-colors"
                             >
                               <Github className="h-5 w-5" />
                             </a>
@@ -130,7 +130,7 @@ export default function Projects() {
                               href={project.live}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800 rounded-lg transition-colors"
+                              className="p-2 text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg transition-colors"
                             >
                               <ExternalLink className="h-5 w-5" />
                             </a>
@@ -138,14 +138,14 @@ export default function Projects() {
                         </div>
                       </div>
 
-                      <p className="text-zinc-400 text-sm mb-4 leading-relaxed">
+                      <p className="text-zinc-600 dark:text-zinc-400 text-sm mb-4 leading-relaxed">
                         {project.description}
                       </p>
 
                       {/* Key Highlights */}
                       <div className="mb-4">
-                        <h4 className="text-xs font-semibold text-zinc-500 uppercase tracking-wider mb-2">Key Highlights</h4>
-                        <ul className="text-sm text-zinc-400 space-y-1">
+                        <h4 className="text-xs font-semibold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider mb-2">Key Highlights</h4>
+                        <ul className="text-sm text-zinc-600 dark:text-zinc-400 space-y-1">
                           {project.highlights.slice(0, 3).map((highlight) => (
                             <li key={highlight} className="flex items-center gap-2">
                               <span className="w-1 h-1 rounded-full bg-emerald-500" />
@@ -161,7 +161,7 @@ export default function Projects() {
                           <Badge
                             key={tech}
                             variant="secondary"
-                            className="bg-zinc-800/50 text-zinc-400 text-xs border border-zinc-700/50"
+                            className="bg-zinc-100 dark:bg-zinc-800/50 text-zinc-600 dark:text-zinc-400 text-xs border border-zinc-200 dark:border-zinc-700/50"
                           >
                             {tech}
                           </Badge>
