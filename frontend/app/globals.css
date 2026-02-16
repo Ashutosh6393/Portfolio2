@@ -6,6 +6,29 @@
 
 @layer base {
   :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 9%;
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 9%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
     --background: 0 0% 3%;
     --foreground: 0 0% 95%;
     --card: 0 0% 6%;
@@ -25,7 +48,6 @@
     --border: 0 0% 15%;
     --input: 0 0% 15%;
     --ring: 0 0% 30%;
-    --radius: 0.5rem;
   }
 }
 
@@ -45,20 +67,37 @@
 }
 
 ::-webkit-scrollbar-track {
+  background: hsl(0 0% 96%);
+}
+
+.dark ::-webkit-scrollbar-track {
   background: hsl(0 0% 6%);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(0 0% 20%);
+  background: hsl(0 0% 80%);
   border-radius: 4px;
 }
 
+.dark ::-webkit-scrollbar-thumb {
+  background: hsl(0 0% 20%);
+}
+
 ::-webkit-scrollbar-thumb:hover {
+  background: hsl(0 0% 70%);
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
   background: hsl(0 0% 30%);
 }
 
 /* Selection */
 ::selection {
+  background: hsl(0 0% 85%);
+  color: hsl(0 0% 9%);
+}
+
+.dark ::selection {
   background: hsl(0 0% 25%);
   color: hsl(0 0% 95%);
 }
@@ -90,6 +129,13 @@ html {
 
 /* Gradient text */
 .gradient-text {
+  background: linear-gradient(135deg, #333 0%, #666 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .gradient-text {
   background: linear-gradient(135deg, #fff 0%, #a8a8a8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
