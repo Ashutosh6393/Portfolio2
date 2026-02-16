@@ -38,8 +38,8 @@ export default function About() {
           viewport={{ once: true }}
           className="mb-12"
         >
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">About Me</h2>
-          <div className="h-1 w-16 bg-zinc-700 rounded" />
+          <h2 className="text-2xl md:text-3xl font-bold text-zinc-900 dark:text-white mb-2">About Me</h2>
+          <div className="h-1 w-16 bg-zinc-300 dark:bg-zinc-700 rounded" />
         </motion.div>
 
         <motion.div
@@ -47,17 +47,17 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
-          className="space-y-6 text-zinc-400 leading-relaxed"
+          className="space-y-6 text-zinc-600 dark:text-zinc-400 leading-relaxed"
         >
           <p>
             I'm a full stack developer with hands-on experience building real-world applications using modern web technologies. I care about{" "}
-            <span className="text-zinc-200 font-medium">system design</span>,{" "}
-            <span className="text-zinc-200 font-medium">scalability</span>,{" "}
-            <span className="text-zinc-200 font-medium">security</span>, and writing code that doesn't break the moment traffic increases.
+            <span className="text-zinc-800 dark:text-zinc-200 font-medium">system design</span>,{" "}
+            <span className="text-zinc-800 dark:text-zinc-200 font-medium">scalability</span>,{" "}
+            <span className="text-zinc-800 dark:text-zinc-200 font-medium">security</span>, and writing code that doesn't break the moment traffic increases.
           </p>
 
           <div className="py-4">
-            <h3 className="text-lg font-semibold text-zinc-200 mb-4">I've worked with:</h3>
+            <h3 className="text-lg font-semibold text-zinc-800 dark:text-zinc-200 mb-4">I've worked with:</h3>
             <motion.div
               variants={container}
               initial="hidden"
@@ -69,7 +69,7 @@ export default function About() {
                 <motion.div key={tech} variants={item}>
                   <Badge
                     variant="secondary"
-                    className="bg-zinc-800/50 text-zinc-300 hover:bg-zinc-700/50 transition-colors border border-zinc-700/50"
+                    className="bg-zinc-100 dark:bg-zinc-800/50 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-700/50 transition-colors border border-zinc-200 dark:border-zinc-700/50"
                   >
                     {tech}
                   </Badge>
@@ -79,7 +79,7 @@ export default function About() {
           </div>
 
           <div className="py-4">
-            <h3 className="text-lg font-semibold text-zinc-200 mb-4">I'm deeply interested in:</h3>
+            <h3 className="text-lg font-semibold text-zinc-800 dark:text-zinc-200 mb-4">I'm deeply interested in:</h3>
             <motion.div
               variants={container}
               initial="hidden"
@@ -91,7 +91,7 @@ export default function About() {
                 <motion.div key={interest} variants={item}>
                   <Badge
                     variant="outline"
-                    className="text-zinc-300 border-zinc-600 hover:border-zinc-500 transition-colors"
+                    className="text-zinc-700 dark:text-zinc-300 border-zinc-300 dark:border-zinc-600 hover:border-zinc-400 dark:hover:border-zinc-500 transition-colors"
                   >
                     {interest}
                   </Badge>
@@ -100,7 +100,7 @@ export default function About() {
             </motion.div>
           </div>
 
-          <p className="text-zinc-300 font-medium pt-4">
+          <p className="text-zinc-700 dark:text-zinc-300 font-medium pt-4">
             Right now, I'm focused on building systems that are scalable, stateless, and resilient.
           </p>
         </motion.div>
