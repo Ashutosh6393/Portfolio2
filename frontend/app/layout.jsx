@@ -1,4 +1,5 @@
 import './globals.css'
+import { ThemeProvider } from '@/components/ThemeProvider'
 
 export const metadata = {
   title: 'Ashutosh Verma | Full Stack Developer',
@@ -14,9 +15,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" suppressHydrationWarning>
       <body>
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
